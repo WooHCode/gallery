@@ -2,14 +2,16 @@
     <div class="card shadow-sm">
         <span class="img" :style="{ backgroundImage: `url(${item.imgPath})` }"></span>
         <div class="card-body">
-            <p class="card-text">{{ item.name }}</p>
+            <p class="card-text">
+                <span>{{ item.name }} &nbsp;</span>
+                <span class="discount badge bg-danger">
+                    {{ item.discountPer }}%
+                </span>
+            </p>
             <div class="d-flex justify-content-between align-items-center">
                 <button class="btn btn-primary">구입하기</button>
                 <small class="price text-muted">
                     {{ lib.getNumerFormatted(item.price) }}원
-                </small>
-                <small class="discount text-danger">
-                    {{ item.discountPer }}%
                 </small>
                 <small class="real text-danger">
                     {{ lib.getNumerFormatted(item.price - (item.price * item.discountPer / 100)) }}원
