@@ -9,6 +9,9 @@
               <li>
                 <router-link to="/" class="text-white">메인 화면</router-link>
               </li>
+              <li v-if="$store.state.account.id">
+                <router-link to="/orders" class="text-white">주문 내역</router-link>
+              </li>
               <li>
                 <router-link to="/login" class="text-white" v-if="!$store.state.account.id">로그인</router-link>
                 <a to="/login" class="text-white" @click="logout()" v-else>로그아웃</a>
@@ -59,7 +62,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-header .navbar .cart{
+header .navbar .cart {
   margin-left: auto;
   color: #fff
 }
