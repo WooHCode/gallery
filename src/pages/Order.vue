@@ -69,6 +69,7 @@ import { reactive } from '@vue/reactivity'
 import axios from 'axios'
 import lib from '@/scripts/lib'
 import { computed } from '@vue/runtime-core'
+import router from '@/scripts/router'
 export default {
     setup() {
         const state = reactive({
@@ -95,7 +96,8 @@ export default {
             args.items = JSON.stringify(state.items);
 
             axios.post("/api/orders", args).then(()=>{
-                console.log('success')
+                alert("주문 완료하였습니다.");
+                router.push({path: "/orders"})
             })
         }
 
