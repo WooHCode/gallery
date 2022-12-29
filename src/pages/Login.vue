@@ -18,7 +18,7 @@
                 <input type="checkbox" value="remember-me" @keyup.enter="submit()"> Remember me</label>
         </div>
         <button class="w-100 btn btn-lg btn-primary" @click="submit()">Sign in</button>
-        <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+        <p class="mt-5 mb-3 text-muted">&copy; 2017-2022</p>
     </div>
 </template>
 
