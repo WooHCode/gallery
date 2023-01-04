@@ -36,7 +36,7 @@ export default {
     setup() {
         const state = reactive({
             orders: [],
-        
+
         })
 
         axios.get("/api/orders").then(({ data }) => {
@@ -61,7 +61,7 @@ export default {
     margin-top: 30px;
 }
 
-.table > tbody {
+.table>tbody {
     border-top: 1px solid #eee;
 }
 </style>
