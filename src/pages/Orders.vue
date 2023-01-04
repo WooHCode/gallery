@@ -36,7 +36,7 @@ export default {
     setup() {
         const state = reactive({
             orders: [],
-
+        
         })
 
         axios.get("/api/orders").then(({ data }) => {
