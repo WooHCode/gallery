@@ -12,7 +12,7 @@
                     <div class="col-md-5 col-lg-4 order-md-last">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
                             <span class="text-primary">구입 목록</span>
-                            <span class="badge bg-primary rounded-pill">{{ state.items.length }}</span>
+                            <span class="badge bg-primary rounded-pill">{{ state.items.lenlgth }}</span>
                         </h4>
                         <ul class="list-group mb-3">
                             <li class="list-group-item d-flex justify-content-between lh-sm"
@@ -30,6 +30,7 @@
                         </h3>
                     </div>
                     <div class="col-md-7 col-lg-8">
+                        <b-button></b-button>
                         <h4 class="mb-3">주문자 정보</h4>
                         <div class="needs-validation" novalidate="">
                             <div class="row g-3">
@@ -56,6 +57,12 @@
                             <input type="text" class="form-control" id="cc-name" v-model="state.form.cardNumber">
                             <hr class="my-4">
                             <button class="w-100 btn btn-primary btn-lg" @click="submit()">결제하기</button>
+                            <div>
+                                <b-button>Button</b-button>
+                                <b-button variant="danger">Button</b-button>
+                                <b-button variant="success">Button</b-button>
+                                <b-button variant="outline-primary">Button</b-button>
+                            </div>
                         </div>
                     </div>
                 </div>
